@@ -8,13 +8,11 @@ These scripts require the use of [jq](https://stedolan.github.io/jq/download/).
 
 ## Contents
 
-### Enroll.sh and Enroll.xlsx
+### Copy.sh and Copy.xlsx
 
-Script to enroll users into existing Canvas courses and a Microsoft Excel template of the CSV file the script uses for input.
+Script to copy content from one Canvas course to another and a Microsoft Excel template of the CSV file the script uses for input.
 
-### Enroll_Sections.sh and Enroll_Sections.xlsx
-
-Script to enroll users into existing Canvas courses sections and a Microsoft Excel template of the CSV file the script uses for input.
+*Note: The script currently depends on both Canvas courses being in the same subaccount.*
 
 ### Create.sh and Create.xlsx
 
@@ -24,8 +22,11 @@ Script to create Canvas courses and a Microsoft Excel template of the CSV file t
 
 Script to create sections in existing Canvas courses and a Microsoft Excel template of the CSV file the script uses for input.
 
-### Copy.sh and Copy.xlsx
+### Enroll.sh and Enroll.xlsx
 
-Script to copy content from one Canvas course to another and a Microsoft Excel template of the CSV file the script uses for input.
+Script to enroll users into existing Canvas courses and a Microsoft Excel template of the CSV file the script uses for input.
 
-*Note: The script currently depends on both Canvas courses being in the same subaccount.*
+### Enroll_Sections.sh and Enroll_Sections.xlsx
+
+Script to enroll users into existing Canvas courses sections and a Microsoft Excel template of the CSV file the script uses for input.
+
