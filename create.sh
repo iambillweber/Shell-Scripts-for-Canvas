@@ -1,12 +1,16 @@
-#!/bin/bash
+#!/bin/zsh
 
 INPUT_FILE=$1
 
 IFS=','
 
-while read URL SUBACCT_ID COURSE_NAME COURSE_CODE
+while read URL TOKEN SUBACCT_ID COURSE_NAME COURSE_CODE TERM_ID
 do
 
-curl -X "POST" "https://$URL.instructure.com/api/v1/accounts/$SUBACCT_ID/courses?course%5Bname%5D=$COURSE_NAME&course%5Bcourse_code%5D=$COURSE_CODE&course%5Bterm_id%5D=$TERM_ID" \
-     -H 'Authorization: <token>'
+curl -H 'Authorization: Bearer '$TOKEN "https://"$URL".instructure.com/api/v1/accounts/"$SUBACCT_ID"/courses" \
+     -X "POST" \
+     -F "course[name]="$COURSE_NAME \
+     -F "course[course_code]="$COURSE_CODE \
+     -F "course[term_id]"=$TERM_ID
+     
 done < $INPUT_FILE
