@@ -1,4 +1,4 @@
-# Canvas BASH Scripts
+# Shell Scripts for Canvas
 
 The purpose of these scripts is to create courses in [Instructure Canvas](https://www.instructure.com/canvas/), copy content from one course shell to another, and to enroll users in courses. They accept *CSV* files for input and made to run in the Terminal in Mac OS, but should work with any *NIX* system.
 
