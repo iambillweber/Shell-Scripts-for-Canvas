@@ -21,8 +21,8 @@ C_ID=$(curl --request GET \
     --header "Authorization: Bearer ${ACCESS_TOKEN}" | /usr/local/bin/jq '.[].id')
 
 curl --request POST \
-	--header "Authorization: Bearer ${TOKEN}" \
 	--url "${API_ENDPOINT}/courses/${C_ID}/enrollments" \
+	--header "Authorization: Bearer ${TOKEN}" \
      -F "enrollment[user_id]=${USER_ID}" \
      -F "enrollment[type]=${ENROLLMENT_TYPE}"
 
