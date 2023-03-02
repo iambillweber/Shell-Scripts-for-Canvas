@@ -22,8 +22,8 @@ C_ID=$(curl --request GET \
 
 curl --request POST \
 	--header "Authorization: Bearer ${TOKEN}" \
-	--url "${API_ENDPOINT}/courses/$C_ID/enrollments" \
-     -F "enrollment[user_id]=$USER_ID" \
-     -F "enrollment[type]=$ENROLLMENT_TYPE"
+	--url "${API_ENDPOINT}/courses/${C_ID}/enrollments" \
+     -F "enrollment[user_id]=${USER_ID}" \
+     -F "enrollment[type]=${ENROLLMENT_TYPE}"
 
 done < $INPUT_FILE
